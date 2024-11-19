@@ -18,14 +18,399 @@
 		<script src="js/index_script.js"></script>
 
 		<style type="text/css">
+			.abt_ul li span { background:none !important; }
+			.dev_li svg { width: 100px;margin-top: 3px; }
+			.default_bg { fill: #f4f4f4 }
+			.bar { fill:#aeaec1; }
+			.txt_default_clr { fill:#d0d0d9; }
+			.darkline { stroke: #000000; }
+
+			.orn_clr { fill: #FF4A17 }
+			.blu_clr { fill: #7339FF }
+			.gry_clr { fill: #8C8EA5 }
+			.grn_clr { fill: #00F176 }
+
+			#txt5, #txt6 { opacity:0 }
+
+			.dev_li:hover svg .orn { animation: animation1 2s infinite; transition: 1s }
+			@keyframes animation1 {
+				100% {
+					transform: translate(0px, 0px);
+				} 50% {
+					transform: translate(0px, -30px);
+				} 0% {
+					transform: translate(0px, 0px);
+				}
+			}
+
+			.dev_li:hover svg .grn { animation: animation5 2s infinite; transition: 1s }
+			@keyframes animation5 {
+				100% {
+					transform: translate(0px, 0px);
+				} 50% {
+					transform: translate(0px, -30px);
+				} 0% {
+					transform: translate(0px, 0px);
+				}
+			}
+
+			.dev_li:hover svg .gry { animation: animation11 2s infinite; transition: 1s }
+			@keyframes animation11 {
+				100% {
+					transform: translate(0px, 0px);
+				} 50% {
+					transform: translate(0px, -30px);
+				} 0% {
+					transform: translate(0px, 0px);
+				}
+			}
+
+			.dev_li:hover svg .blu { animation: animation10 2s infinite; transition: 1s }
+			@keyframes animation10 {
+				100% {
+					transform: translate(0px, 0px);
+				} 50% {
+					fill: #6238FF; 
+					transform: translate(0px, -30px);
+				} 0% {
+				}
+			}
+
+			.dev_li:hover svg #txt1 { animation: opa_1 2s infinite; transition: 1s }
+			@keyframes opa_1 {
+				100% {
+				} 80% { 
+					opacity: 1;
+				} 70% { 
+					opacity: 0;
+				} 20% {
+					opacity: 0;
+				} 0% {
+					opacity: 1;
+				}
+			}
+
+			.dev_li:hover svg #txt2 { animation: opa_2 2s infinite; transition: 1s }
+			@keyframes opa_2 {
+				100% {
+				} 70% { 
+					opacity: 1;
+				} 60% { 
+					opacity: 0;
+				} 40% {
+					opacity: 0;
+				} 0% {
+					opacity: 1;
+				}
+			}
+
+			.dev_li:hover svg #txt5 { animation: opa_3 2s infinite; transition: 1s }
+			@keyframes opa_3 {
+				100% {
+					opacity: 0;
+				} 80% { 
+					opacity: 0;
+				} 70% { 
+					opacity: 1;
+				} 20% {
+					opacity: 1;
+				} 0% {
+					opacity: 0;
+				}
+			}
+
+			.dev_li:hover svg #txt6 { animation: opa_4 2s infinite; transition: 1s }
+			@keyframes opa_4 {
+				100% {
+					opacity: 0;
+				} 65% { 
+					opacity: 0;
+				} 55% { 
+					opacity: 1;
+				} 40% {
+					opacity: 1;
+				} 0% {
+					opacity: 0;
+				}
+			}
+
 			
+			.dev_li:hover svg .bar rect { animation: animation 2s infinite; transition: 1s }
+			@keyframes animation {
+				100% {
+					transform: translate(0px, 0px);
+				} 50% {
+					transform: translate(0px, 27px);
+					fill: #000000;
+				} 0% {
+					transform: translate(0px, 0px);
+					fill:#aeaec1; 
+				}
+			}
+
+			.dev_li:hover svg #box path { animation: animation2 2s infinite; transition: 1s }
+			@keyframes animation2 {
+				100% {
+					fill: #f4f4f4; 
+				} 50% {
+					fill: #f4f4f4; 
+				} 0% {
+					fill: #f4f4f4; 
+				}
+			}
+			
+
+			/*.dev_li svg .orn { animation: animation1 2s infinite; transition: 1s }
+			.dev_li svg .grn { animation: animation5 2s infinite; transition: 1s }
+			.dev_li svg .gry { animation: animation11 2s infinite; transition: 1s }
+			.dev_li svg .blu { animation: animation10 2s infinite; transition: 1s }
+			.dev_li svg #txt1 { animation: opa_1 2s infinite; transition: 1s }
+			.dev_li svg #txt2 { animation: opa_2 2s infinite; transition: 1s }
+			.dev_li svg #txt5 { animation: opa_3 2s infinite; transition: 1s }
+			.dev_li svg #txt6 { animation: opa_4 2s infinite; transition: 1s }
+			.dev_li svg .bar rect { animation: animation 2s infinite; transition: 1s }
+			.dev_li svg #box path { animation: animation2 2s infinite; transition: 1s }*/
+
+
+			/* tools */ 
+			.tool_li svg { width: 100px; margin-left: 17px }
+			.tool_li .rec_1, .tool_li .rec_2, .tool_li #arrow { transition:0s }
+			.tool_li .rec_1 { stroke: #000; stroke-width: 2px; transition: 0s; d:path("M3616.62,3691.42L3595.4,3741.71L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z") }
+			.tool_li .rec_2 { transition: 0.1s; d:path("M3618.62,3692.27L3597.41,3742.56C3597.2,3743.06 3596.81,3743.46 3596.31,3743.69L3542.49,3768.43C3541.82,3768.74 3541.03,3768.69 3540.41,3768.29C3539.79,3767.89 3539.41,3767.2 3539.41,3766.46L3539.41,3691.42C3539.41,3690.22 3540.38,3689.25 3541.58,3689.25L3616.62,3689.25C3617.35,3689.25 3618.03,3689.61 3618.43,3690.22C3618.84,3690.83 3618.91,3691.6 3618.62,3692.27ZM3616.62,3691.42L3541.58,3691.42L3541.58,3766.46L3595.4,3741.71L3616.62,3691.42Z") }
+
+
+			.tool_li #arrow { transition: 0.1s; transform: translate(-19px, 6.8px); }
+
+			.tool_li:hover svg #arrow { animation: arw_3 3s infinite; transition: 1s }
+			@keyframes arw_3 {
+				100% {
+				} 90% {
+					transition: 0.1s; transform: translate(-19px, 6.8px);
+				} 70% {
+					transform: translate(4px, 10.2px); transition: 0.1s;
+				} 50% {
+					transition: 0.1s; transform: translate(-19px, 6.8px);
+				} 20% {
+					transform: translate(4px, 10.2px); transition: 0.1s;
+				} 0% {
+					
+				}
+			}
+
+			.tool_li:hover svg .rec_1 { animation: arw_2 3s infinite; }
+			
+			@keyframes arw_2 {
+				100% {
+					fill: #f4f4f4;
+				} 90% {
+					d:path("M3616.62,3691.42L3595.4,3741.71L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z");
+					fill: #f4f4f4;
+					stroke: #000;
+				} 70% {
+					d:path("M3616.62,3691.42L3617.7,3766.46L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z");
+					fill: #d5e3ff;
+					stroke: #3d4fff;
+				} 50% {
+					d:path("M3616.62,3691.42L3595.4,3741.71L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z");
+					fill: #d5e3ff;
+					stroke: #3d4fff;
+				}  20%{
+					fill: #d5e3ff;
+					stroke: #3d4fff;
+					d:path("M3616.62,3691.42L3617.7,3766.46L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z");
+					
+				} 0% {
+					fill: #f4f4f4;
+				}
+			}
+
+			.tool_li:hover svg .rec_2 { animation: arw_1 3s infinite; transition: 1s }
+
+			@keyframes arw_1 {
+				100% {
+					
+				} 90% {
+					transition: 0.1s; 
+					d:path("M3618.62,3692.27L3597.41,3742.56C3597.2,3743.06 3596.81,3743.46 3596.31,3743.69L3542.49,3768.43C3541.82,3768.74 3541.03,3768.69 3540.41,3768.29C3539.79,3767.89 3539.41,3767.2 3539.41,3766.46L3539.41,3691.42C3539.41,3690.22 3540.38,3689.25 3541.58,3689.25L3616.62,3689.25C3617.35,3689.25 3618.03,3689.61 3618.43,3690.22C3618.84,3690.83 3618.91,3691.6 3618.62,3692.27ZM3616.62,3691.42L3541.58,3691.42L3541.58,3766.46L3595.4,3741.71L3616.62,3691.42Z");
+				} 70% {
+					transition: 0.1s; 
+					d:path("M3618.8,3691.39L3619.88,3766.43C3619.89,3767.01 3619.66,3767.57 3619.25,3767.99C3618.84,3768.4 3618.29,3768.63 3617.7,3768.63L3541.58,3768.63C3540.38,3768.63 3539.41,3767.66 3539.41,3766.46L3539.41,3691.42C3539.41,3690.22 3540.38,3689.25 3541.58,3689.25L3616.62,3689.25C3617.81,3689.25 3618.78,3690.2 3618.8,3691.39ZM3616.62,3691.42L3541.58,3691.42L3541.58,3766.46L3617.7,3766.46L3616.62,3691.42Z");
+				
+					fill: #3D4FFF;
+				} 45% {
+					fill: #3D4FFF;
+				} 20% {
+					fill: #3D4FFF;
+					transition: 0.1s; 
+					d:path("M3618.8,3691.39L3619.88,3766.43C3619.89,3767.01 3619.66,3767.57 3619.25,3767.99C3618.84,3768.4 3618.29,3768.63 3617.7,3768.63L3541.58,3768.63C3540.38,3768.63 3539.41,3767.66 3539.41,3766.46L3539.41,3691.42C3539.41,3690.22 3540.38,3689.25 3541.58,3689.25L3616.62,3689.25C3617.81,3689.25 3618.78,3690.2 3618.8,3691.39ZM3616.62,3691.42L3541.58,3691.42L3541.58,3766.46L3617.7,3766.46L3616.62,3691.42Z");
+				} 0% {
+
+				}
+			}
+
+			.tool_li:hover svg #dots path, .tool_li:hover svg #right_bttom path { animation: arw_4 3s infinite; transition: 1s }
+			@keyframes arw_4 {
+				100% {
+					
+				} 90% {
+				} 70% {
+					fill: #3D4FFF;
+				} 45% {
+					fill: #3D4FFF;
+				} 20% {
+					fill: #3D4FFF;
+				
+				} 0% {
+
+				}
+			}
+			
+
+			/* worker */
+			.worker_li svg { width: 60px; margin-top: -4px }
+			.bg_white { fill: #fff; }
+			.cr_1 { stroke-width:4.5px; stroke: #000; }
+
+			.worker_li:hover svg { animation: wrkr_0 3s infinite; transition: 1s }
+			@keyframes wrkr_0 {
+				100% {
+				} 90% {
+					transform: rotate(0);
+					
+				} 70% {
+					transform: rotate(-10deg);
+					
+				} 20% {
+					transform: rotate(10deg);
+				} 0% {
+					
+					transform: rotate(0);
+				}
+			}
+
+			#f_feat { opacity:0 }
+			.worker_li:hover svg #f_feat { animation: wrkr_2 3s infinite; transition: 1s }
+			@keyframes wrkr_2 {
+				100% {
+				} 90% {
+					opacity: 0;
+					
+				} 75% {
+					transform: rotate(0);
+				} 72% {
+					opacity: 0;
+				} 70% {
+					opacity: 1;
+					transform: translate(0, 0.66px);
+					
+				} 20% {
+					transform: rotate(10deg);
+					opacity: 1;
+					transform: translate(0, 0.66px);
+				} 10% {
+					opacity: 1;
+				} 0% {
+					opacity: 0;
+					transform: rotate(0);
+				}
+			}
+
+			.worker_li:hover svg .cr_1 { animation: wrkr_3 3s infinite; transition: 1s }
+			@keyframes wrkr_3 {
+				100% {
+				} 80% {
+					stroke-width: 4.5px;
+					
+				} 70% {
+					stroke-width: 14px;
+					transform: translate(0, 5px);
+					transition: 0.1s;
+					
+				} 20% {
+					transform: translate(0, 5px);
+				} 5% {
+					stroke-width: 14px;
+				} 0% {
+					stroke-width: 4.5px;
+				}
+			}
+
+			.worker_li:hover svg .cr_2 { animation: wrkr_4 3s infinite; transition: 1s }
+			@keyframes wrkr_4 {
+				100% {
+				} 80% {
+					stroke-width: 0;
+					fill: #fff;
+				} 70% {
+					stroke-width: 10px;
+					stroke:#FFCD4A;
+					fill: #FFCD4A;
+					transform: translate(0, 5px);
+					transition: 0.1s;
+				} 20% {
+					transform: translate(0, 5px);
+					transition: 0.1s;
+				} 5% {
+					stroke-width: 10px;
+					stroke:#FFCD4A;
+					fill: #FFCD4A;
+				} 0% {
+					stroke-width: 0;
+					fill: #fff;
+				}
+			}
+
+			.worker_li:hover svg .sh_1 { animation: wrkr_5 3s infinite; transition: 1s }
+			@keyframes wrkr_5 {
+				100% {
+				} 80% {
+					transform: translate(0px, 0);
+					fill: #fff;
+				} 70% {
+					transform: translate(0px, 15px);
+					fill: #FFCD4A;
+				} 20% {
+					transform: translate(0px, 15px);
+					fill: #FFCD4A;
+				} 0% {
+					transform: translate(0px, 0);
+					fill: #fff;
+				}
+			}
+
+			.worker_li:hover svg .sh_2 { animation: wrkr_6 3s infinite; transition: 1s }
+			@keyframes wrkr_6 {
+				100% {
+				} 90% {
+					transform: translate(0px, 0);
+					
+				} 70% {
+					transform: translate(0px, 15px);
+				
+				} 20% {
+					transform: translate(0px, 15px);
+			
+				} 0% {
+					transform: translate(0px, 0);
+	
+				}
+			}
+
 
 		</style>
 
 		<script type="text/javascript">
 		</script>
 
-	
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4524T4PMET"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-4524T4PMET');
+		</script>
 	</head>
 	<body>
 
@@ -103,7 +488,7 @@
 					<ul class="pro_ul">
 						<li class="pro_1">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/ltch_thmb_bk.webp" class="bk" alt=""><img src="images/main/ltch_thmb.webp" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/ltch_thmb_bk.jpg" class="bk" alt=""><img src="images/main/ltch_thmb.jpg" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>LITCH<span class="app_p">어플리케이션</span></h2>
@@ -122,7 +507,7 @@
 						</li>
 						<li class="pro_2">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/jdk_thmb_bk.webp" class="bk" alt=""><img src="images/main/jdk_thmb.webp" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/jdk_thmb_bk.jpg" class="bk" alt=""><img src="images/main/jdk_thmb.jpg" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>JANDIK<span class="app_p">하이브리드</span></h2>
@@ -141,7 +526,7 @@
 						</li>
 						<li class="pro_3">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hdwk_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdwk_thmb.webp"  loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hdwk_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdwk_thmb.jpg"  loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODUWORKS<span class="app_p">어플리케이션</span></h2>
@@ -160,7 +545,7 @@
 						</li>
 						<li class="pro_4">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hdhm_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdhm_thmb.webp" loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hdhm_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdhm_thmb.jpg" loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODUHOME<span class="app_p">어플리케이션</span></h2>
@@ -181,7 +566,7 @@
 						</li>
 						<li class="pro_5">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hddc_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hddc_thmb.webp" loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hddc_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hddc_thmb.jpg" loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODUDOC<span class="app_p">어플리케이션</span></h2>
@@ -202,7 +587,7 @@
 						</li>
 						<li class="pro_6">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hd_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hd_thmb.webp" loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hd_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hd_thmb.jpg" loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODU<span class="app_p">어플리케이션</span></h2>
@@ -223,7 +608,7 @@
 						</li>
 						<li class="pro_7">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hdck_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdck_thmb.webp" loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hdck_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdck_thmb.jpg" loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODUCLICK<span class="app_p">웹 버전</span></h2>
@@ -244,7 +629,7 @@
 						</li>
 						<li class="pro_8">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/hdcktb_thmb_bk.webp" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdcktb_thmb.webp" loading="lazy" width="376.8" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/hdcktb_thmb_bk.jpg" loading="lazy" width="376.8" class="bk" alt=""><img src="images/main/hdcktb_thmb.jpg" loading="lazy" width="376.8" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>HODUCLICK<span class="app_p">탭 버전</span></h2>
@@ -273,7 +658,7 @@
 					<ul class="pro_ul">
 						<li class="pro_1">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/energy_thmb_bk.webp" class="bk" alt=""><img src="images/main/energy_thmb.webp" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/energy_thmb_bk.jpg" class="bk" alt=""><img src="images/main/energy_thmb.jpg" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>#3 <span class="app_p ff">2024</span></h2>
@@ -289,10 +674,10 @@
 											<p>본인에게 필요한 비타민을 원하는 맛과 타입(젤리, 캔디, 음료)으로 제작해주는 회사입니다.</p>
 										</div>
 										<div class="fun_img">
-											<img src="images/main/energy_cont_1.webp" class="img_1" alt="YOURENERGY 메인화면 1">
-											<img src="images/main/energy_cont_2.webp" loading="lazy" width="1200" class="img_2" alt="YOURENERGY 메인화면 2">
-											<img src="images/main/energy_cont_3.webp" loading="lazy" width="1200" class="img_3" alt="YOURENERGY 메인화면 3">
-											<img src="images/main/energy_cont_4.webp" loading="lazy" width="1200" class="img_4" alt="YOURENERGY 메인화면 3">
+											<img src="images/main/energy_cont_1.jpg" class="img_1" alt="YOURENERGY 메인화면 1">
+											<img src="images/main/energy_cont_2.jpg" loading="lazy" width="1200" class="img_2" alt="YOURENERGY 메인화면 2">
+											<img src="images/main/energy_cont_3.jpg" loading="lazy" width="1200" class="img_3" alt="YOURENERGY 메인화면 3">
+											<img src="images/main/energy_cont_4.jpg" loading="lazy" width="1200" class="img_4" alt="YOURENERGY 메인화면 3">
 										</div>
 										<a href="" class="close">닫기</a>
 									</div>
@@ -302,7 +687,7 @@
 
 						<li class="pro_2">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/dive_thmb_bk.webp" class="bk" alt=""><img src="images/main/dive_thmb.webp" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/dive_thmb_bk.jpg" class="bk" alt=""><img src="images/main/dive_thmb.jpg" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>#2 <span class="app_p yy">2024</span></h2>
@@ -318,9 +703,9 @@
 											<p>이미지와 텍스트를 활용하여 간단히 디자인한 웹사이트 메인화면입니다.</p>
 										</div>
 										<div class="fun_img">
-											<img src="images/main/dive_cont_1.webp" class="img_1" alt="Dive Into 메인화면 1">
-											<img src="images/main/dive_cont_2.webp" loading="lazy" width="1200" class="img_2" alt="Dive Into 메인화면 2">
-											<img src="images/main/dive_cont_3.webp" loading="lazy" width="1200" class="img_3" alt="Dive Into 메인화면 3">
+											<img src="images/main/dive_cont_1.jpg" class="img_1" alt="Dive Into 메인화면 1">
+											<img src="images/main/dive_cont_2.jpg" loading="lazy" width="1200" class="img_2" alt="Dive Into 메인화면 2">
+											<img src="images/main/dive_cont_3.jpg" loading="lazy" width="1200" class="img_3" alt="Dive Into 메인화면 3">
 										</div>
 										<a href="" class="close">닫기</a>
 									</div>
@@ -329,7 +714,7 @@
 						</li>
 						<li class="pro_3">
 							<div class="pro_div">
-								<div class="pro_img_div"><img src="images/main/ex_thmb_bk.webp" class="bk" alt=""><img src="images/main/ex_thmb.webp" class="clr" alt=""></div>
+								<div class="pro_img_div"><img src="images/main/ex_thmb_bk.jpg" class="bk" alt=""><img src="images/main/ex_thmb.jpg" class="clr" alt=""></div>
 								<div class="descript">
 									<div class="descript_div">
 										<h2>#1 <span class="app_p yy">2023</span></h2>
@@ -345,11 +730,11 @@
 											<p>패션과 문화를 통합한 사이트로 컬렉션 및 주목해야할 전시회 등 여러 정보를 제공합니다. </p>
 										</div>
 										<div class="fun_img">
-											<img src="images/main/ex_cont_1.webp" class="img_1" alt="exmars 웹 화면 1">
-											<img src="images/main/ex_cont_2.webp" loading="lazy" width="1200" class="img_2" alt="exmars 웹 화면 2">
-											<img src="images/main/ex_cont_3.webp" loading="lazy" width="1200" class="img_3" alt="exmars 웹 화면 3">
-											<img src="images/main/ex_cont_4.webp" loading="lazy" width="1200" class="img_4" alt="exmars 모바일 화면">
-											<img src="images/main/ex_cont_5.webp" loading="lazy" width="1200" class="img_5" alt="exmars 웹 화면 4">
+											<img src="images/main/ex_cont_1.jpg" class="img_1" alt="exmars 웹 화면 1">
+											<img src="images/main/ex_cont_2.jpg" loading="lazy" width="1200" class="img_2" alt="exmars 웹 화면 2">
+											<img src="images/main/ex_cont_3.jpg" loading="lazy" width="1200" class="img_3" alt="exmars 웹 화면 3">
+											<img src="images/main/ex_cont_4.jpg" loading="lazy" width="1200" class="img_4" alt="exmars 모바일 화면">
+											<img src="images/main/ex_cont_5.png" loading="lazy" width="1200" class="img_5" alt="exmars 웹 화면 4">
 										</div>
 										<a href="" class="close">닫기</a>
 									</div>
@@ -372,7 +757,86 @@
 						</p>
 						<ul class="abt_ul">
 							<li class="dev_li">
-								<h2><span>개발 아이콘</span>개발</h2>
+								<h2><span>
+									<svg viewBox="0 0 112 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+									    <g transform="matrix(1,0,0,1,-517.422,-303.965)">
+									        <g transform="matrix(1,0,0,6.74992,-440.247,-3456.32)">
+									            <g id="box">
+									                <g id="bg" class="default_bg darkline" transform="matrix(1.10509,0,0,0.124285,-3067.85,100.58)">
+									                    <path d="M3742.34,3685.43L3742.34,3772.45L3644.33,3772.45L3644.33,3685.43" style="stroke-width:2.04px;"/>
+									                </g>
+									                
+									                <g id="bar" class="bar" transform="matrix(1,0,0,0.25765,439.235,477.482)">
+									                    <rect x="622.250" y="315.51" width="5.2" height="13.889" />
+									                </g>
+									                <g id="top" class="default_bg darkline" transform="matrix(1.10509,0,0,0.141025,385.097,513.023)">
+									                    <rect x="519.753" y="314.339" width="98.018" height="9.005" style="stroke-width:2.04px;"/>
+									                </g>
+
+									                <g id="rightbar" class="darkline" transform="matrix(4.56036e-17,-0.110337,0.641526,5.81964e-18,859.132,626.785)">
+									                    <path d="M519.753,314.339L617.771,314.339" style="stroke-width:2.88px;stroke-linejoin:round;"/>
+									                </g>
+									            </g>
+									            <g id="text">
+									                <g id="txt1" transform="matrix(15.8193,0,0,0.160796,-8126.09,507.901)">
+									                    <g>
+									                        <path class="txt_default_clr orn" d="M578.173,328.699C578.173,330.224 578.088,331.463 577.983,331.463L575.328,331.463C575.223,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.223,325.935 575.328,325.935L577.983,325.935C578.088,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+
+
+									                    </g>
+									                </g>
+									                <g id="txt2">
+									                    <g transform="matrix(5.36315,0,0,0.160796,-2112.37,510.038)">
+									                        <path class="txt_default_clr blu" d="M578.173,328.699C578.173,330.224 577.922,331.463 577.613,331.463L575.698,331.463C575.389,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.389,325.935 575.698,325.935L577.613,325.935C577.922,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                    <g transform="matrix(13.8443,0,0,0.160796,-6968.95,510.038)">
+									                        <path class="txt_default_clr gry" d="M578.173,328.699C578.173,330.224 578.075,331.463 577.956,331.463L575.355,331.463C575.235,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.235,325.935 575.355,325.935L577.956,325.935C578.075,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                </g>
+									                <g id="txt3">
+									                    <g transform="matrix(8.56068,0,0,0.160796,-3951.39,512.175)">
+									                        <path class="txt_default_clr orn" d="M578.173,328.699C578.173,330.224 578.016,331.463 577.822,331.463L575.489,331.463C575.295,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.295,325.935 575.489,325.935L577.822,325.935C578.016,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                    <g transform="matrix(3.62525,0,0,0.160796,-1081.86,512.175)">
+									                        <path class="txt_default_clr grn" d="M578.173,328.699C578.173,330.224 577.802,331.463 577.345,331.463L575.966,331.463C575.509,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.509,325.935 575.966,325.935L577.345,325.935C577.802,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                    <g transform="matrix(8.57447,0,0,0.160796,-3912.35,512.175)">
+									                        <path class="txt_default_clr gry" d="M578.173,328.699C578.173,330.224 578.016,331.463 577.823,331.463L575.488,331.463C575.295,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.295,325.935 575.488,325.935L577.823,325.935C578.016,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                </g>
+									                <g id="txt4">
+									                    <g transform="matrix(11.5358,0,0,0.160796,-5644.49,514.312)">
+									                        <path class="txt_default_clr blu" d="M578.173,328.699C578.173,330.224 578.056,331.463 577.913,331.463L575.398,331.463C575.255,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.255,325.935 575.398,325.935L577.913,325.935C578.056,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                    <g transform="matrix(4.28034,0,0,0.160796,-1489.61,514.312)">
+									                        <path class="txt_default_clr grn" d="M578.173,328.699C578.173,330.224 577.859,331.463 577.472,331.463L575.839,331.463C575.452,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.452,325.935 575.839,325.935L577.472,325.935C577.859,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                    </g>
+									                </g>
+									                <g id="txt5" transform="matrix(1,0,0,1,0,8.54671)">
+									                    <g >
+									                        <g transform="matrix(10.2085,0,0,0.160796,-4899.13,507.901)">
+									                            <path class="txt_default_clr orn" d="M578.173,328.699C578.173,330.224 578.041,331.463 577.879,331.463L575.432,331.463C575.27,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.27,325.935 575.432,325.935L577.879,325.935C578.041,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                        </g>
+									                        <g transform="matrix(4.27334,0,0,0.160796,-1449.6,507.901)">
+									                            <path class="txt_default_clr gry" d="M578.173,328.699C578.173,330.224 577.858,331.463 577.471,331.463L575.84,331.463C575.453,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.453,325.935 575.84,325.935L577.471,325.935C577.858,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                        </g>
+									                    </g>
+									                </g>
+									                <g id="txt6" transform="matrix(1,0,0,1,0,8.54671)">
+									                    <g>
+									                        <g transform="matrix(5.36315,0,0,0.160796,-2112.37,510.038)">
+									                            <path class="txt_default_clr blu" d="M578.173,328.699C578.173,330.224 577.922,331.463 577.613,331.463L575.698,331.463C575.389,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.389,325.935 575.698,325.935L577.613,325.935C577.922,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                        </g>
+									                        <g transform="matrix(17.9351,0,0,0.160796,-9321.73,510.038)">
+									                            <path class="txt_default_clr gry" d="M578.173,328.699C578.173,330.224 578.098,331.463 578.005,331.463L575.306,331.463C575.213,331.463 575.138,330.224 575.138,328.699C575.138,327.173 575.213,325.935 575.306,325.935L578.005,325.935C578.098,325.935 578.173,327.173 578.173,328.699Z" style=""/>
+									                        </g>
+									                    </g>
+									                </g>
+									            </g>
+									        </g>
+									    </g>
+									</svg>
+								</span>개발</h2>
 								<ul class="sub_ul">
 									<li>HTML/CSS</li>
 									<li>jQuery</li>
@@ -381,7 +845,98 @@
 								</ul>
 							</li>
 							<li class="tool_li">
-								<h2><span>프로그램 아이콘</span>디자인 툴</h2>
+								<h2>
+									<span>
+									<svg width="100%" height="100%" viewBox="0 0 103 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+									    <g transform="matrix(1,0,0,1,-770.42,-309.768)">
+									        <g id="tls" transform="matrix(0.919991,0,0,6.20987,-379.375,-3151.72)">
+									            <g id="rectangle" transform="matrix(1,0,0,0.14815,-2283.63,11.7435)">
+									                <path class="rec_1 default_bg" d="M3616.62,3691.42L3617.7,3766.46L3541.58,3766.46L3541.58,3691.42L3616.62,3691.42Z" style=""/>
+									                <!-- <path class="rec_2" d="M3618.8,3691.39L3619.88,3766.43C3619.89,3767.01 3619.66,3767.57 3619.25,3767.99C3618.84,3768.4 3618.29,3768.63 3617.7,3768.63L3541.58,3768.63C3540.38,3768.63 3539.41,3767.66 3539.41,3766.46L3539.41,3691.42C3539.41,3690.22 3540.38,3689.25 3541.58,3689.25L3616.62,3689.25C3617.81,3689.25 3618.78,3690.2 3618.8,3691.39ZM3616.62,3691.42L3541.58,3691.42L3541.58,3766.46L3617.7,3766.46L3616.62,3691.42Z"/> -->
+									            </g>
+									            <g id="dots">
+									                <g id="left_top" transform="matrix(1,0,0,0.14815,-2282.6,11.7436)">
+									                    <circle cx="3540.56" cy="3691.42" r="5.989" style="fill:#fff;"/>
+									                    <path d="M3540.56,3683.26C3545.06,3683.26 3548.72,3686.91 3548.72,3691.42C3548.72,3695.93 3545.06,3699.58 3540.56,3699.58C3536.05,3699.58 3532.39,3695.93 3532.39,3691.42C3532.39,3686.91 3536.05,3683.26 3540.56,3683.26ZM3540.56,3685.43C3537.25,3685.43 3534.57,3688.12 3534.57,3691.42C3534.57,3694.73 3537.25,3697.41 3540.56,3697.41C3543.86,3697.41 3546.54,3694.73 3546.54,3691.42C3546.54,3688.12 3543.86,3685.43 3540.56,3685.43Z"/>
+									                </g>
+									                <g id="left_bottom" transform="matrix(1,0,0,0.14815,-2282.6,22.8606)">
+									                    <circle cx="3540.56" cy="3691.42" r="5.989" style="fill:#fff;"/>
+									                    <path d="M3540.56,3683.26C3545.06,3683.26 3548.72,3686.91 3548.72,3691.42C3548.72,3695.93 3545.06,3699.58 3540.56,3699.58C3536.05,3699.58 3532.39,3695.93 3532.39,3691.42C3532.39,3686.91 3536.05,3683.26 3540.56,3683.26ZM3540.56,3685.43C3537.25,3685.43 3534.57,3688.12 3534.57,3691.42C3534.57,3694.73 3537.25,3697.41 3540.56,3697.41C3543.86,3697.41 3546.54,3694.73 3546.54,3691.42C3546.54,3688.12 3543.86,3685.43 3540.56,3685.43Z"/>
+									                </g>
+									                <g id="right_top" transform="matrix(1,0,0,0.14815,-2205.96,11.7435)">
+									                    <circle cx="3540.56" cy="3691.42" r="5.989" style="fill:#fff;"/>
+									                    <path d="M3540.56,3683.26C3545.06,3683.26 3548.72,3686.91 3548.72,3691.42C3548.72,3695.93 3545.06,3699.58 3540.56,3699.58C3536.05,3699.58 3532.39,3695.93 3532.39,3691.42C3532.39,3686.91 3536.05,3683.26 3540.56,3683.26ZM3540.56,3685.43C3537.25,3685.43 3534.57,3688.12 3534.57,3691.42C3534.57,3694.73 3537.25,3697.41 3540.56,3697.41C3543.86,3697.41 3546.54,3694.73 3546.54,3691.42C3546.54,3688.12 3543.86,3685.43 3540.56,3685.43Z"/>
+									                </g>
+									            </g>
+									            <g id="arrow" transform="matrix(0.98574,-0.0249303,1.13586,0.98574,-611.888,51.4539)">
+									                <g id="right_bttom" transform="matrix(0.98574,0.0249303,-0.168277,0.146037,-1538.87,-67.9263)">
+									                    <circle cx="3540.56" cy="3691.42" r="5.989" style="fill:#fff;"/>
+									                    <path d="M3540.56,3683.26C3545.06,3683.26 3548.72,3686.91 3548.72,3691.42C3548.72,3695.93 3545.06,3699.58 3540.56,3699.58C3536.05,3699.58 3532.39,3695.93 3532.39,3691.42C3532.39,3686.91 3536.05,3683.26 3540.56,3683.26ZM3540.56,3685.43C3537.25,3685.43 3534.57,3688.12 3534.57,3691.42C3534.57,3694.73 3537.25,3697.41 3540.56,3697.41C3543.86,3697.41 3546.54,3694.73 3546.54,3691.42C3546.54,3688.12 3543.86,3685.43 3540.56,3685.43Z"/>
+									                </g>
+									                <g transform="matrix(0.33579,-0.0287216,0.317981,0.0815949,-1078.88,363.735)">
+									                    <path d="M3670.99,3720.49L3647.62,3726.39L3675.99,3692.12L3704.36,3726.39L3680.99,3720.42L3680.99,3748.97L3670.99,3748.97L3670.99,3720.49Z"/>
+									                    <path d="M3665.39,3725.61L3649.76,3729.54C3647.6,3730.09 3645.1,3729.76 3643.51,3728.71C3641.92,3727.66 3641.56,3726.12 3642.62,3724.84L3670.99,3690.58C3671.94,3689.42 3673.87,3688.7 3675.99,3688.7C3678.11,3688.7 3680.04,3689.42 3681,3690.58L3709.37,3724.84C3710.42,3726.12 3710.06,3727.67 3708.46,3728.71C3706.86,3729.76 3704.36,3730.09 3702.2,3729.54L3686.59,3725.56L3686.59,3748.97C3686.59,3750.86 3684.08,3752.39 3680.99,3752.39L3670.99,3752.39C3667.9,3752.39 3665.39,3750.86 3665.39,3748.97L3665.39,3725.61ZM3670.99,3720.49L3670.99,3748.97L3680.99,3748.97L3680.99,3720.42L3704.36,3726.39L3675.99,3692.12L3647.62,3726.39L3670.99,3720.49Z" style="fill:#fff;"/>
+									                </g>
+									            </g>
+									        </g>
+									    </g>
+									</svg></span>
+									<!-- <span class="bg">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 106">
+											<defs>
+												<linearGradient id='a' graidentUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
+													<stop offset='0' stop-color='#0F0'>
+														<animate class="ColorList1654321" attributeName="stop-color" 
+														values="red;purple;blue;green;yellow;orange;red;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<stop offset='.5' stop-color='#0F0'>
+														<animate class="ColorList6543216" attributeName="stop-color" 
+														values="purple;blue;green;yellow;orange;red;purple;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<stop offset='1' stop-color='#0AF'>
+														<animate class="ColorList5432165" attributeName="stop-color" 
+														values="blue;green;yellow;orange;red;purple;blue;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5"
+													to="360 .5 .5"
+													dur="20s" repeatCount="indefinite" />
+												</linearGradient>
+
+												<linearGradient id='b' graidentUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
+													<stop offset='0' stop-color='#0F0'>
+														<animate class="ColorList1654321" attributeName="stop-color" 
+														values="red;purple;blue;green;yellow;orange;red;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<stop offset='.5' stop-color='#0F0'>
+														<animate class="ColorList6543216" attributeName="stop-color" 
+														values="purple;blue;green;yellow;orange;red;purple;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<stop offset='1' stop-color='#0AF'>
+														<animate class="ColorList5432165" attributeName="stop-color" 
+														values="blue;green;yellow;orange;red;purple;blue;"
+														dur="20s" repeatCount="indefinite">
+														</animate>
+													</stop>
+													<animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5"
+													to="360 .5 .5" class="ignore"
+													dur="10s" repeatCount="indefinite" />
+												</linearGradient>
+											</defs>
+											<rect fill='url(#a)' width='100%' height='100%' />
+											<rect fill='url(#b)' width='100%' height='100%' />
+										</svg>
+									</span> -->
+								디자인 툴</h2>
 								<ul class="sub_ul">
 									<li>포토샵</li>
 									<li>일러스트레이터</li>
@@ -390,12 +945,61 @@
 								</ul>
 							</li>
 							<li class="worker_li">
-								<h2><span>경력 아이콘</span>경력</h2>
+								<h2><span>
+									<svg viewBox="0 0 130 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+									    <g transform="matrix(2.08333,0,0,2.08333,-2124.07,-631.156)">
+									        <g transform="matrix(1,0,0,6.74992,-496.236,-3451.65)">
+									            <g id="card">
+									                <g id="lace_1" transform="matrix(-0.747963,0,0,0.123926,4418.46,91.9529)">
+									                    <path d="M3839.3,3770.45L3819.59,3747.73" style="fill:none;stroke:#000;stroke-width:2.52px;"/>
+									                </g>
+									                <g id="card_bg" transform="matrix(0.632539,0,0,0.136202,-789.389,55.3331)">
+									                    <rect class="default_bg" x="3644.33" y="3685.43" width="98.018" height="87.017" style=""/>
+									                    
+									                </g>
+									                <g id="hole" transform="matrix(1.84122,0,0,0.272777,-5522.21,-469.447)">
+									                    <circle cx="3839.3" cy="3770.45" r="2.987" style="fill:#fff;"/>
+									                    <path d="M3839.3,3767.46C3840.94,3767.46 3842.28,3768.8 3842.28,3770.45C3842.28,3772.1 3840.94,3773.43 3839.3,3773.43C3837.65,3773.43 3836.31,3772.1 3836.31,3770.45C3836.31,3768.8 3837.65,3767.46 3839.3,3767.46ZM3839.3,3768.55C3838.25,3768.55 3837.39,3769.4 3837.39,3770.45C3837.39,3771.49 3838.25,3772.35 3839.3,3772.35C3840.34,3772.35 3841.2,3771.49 3841.2,3770.45C3841.2,3769.4 3840.34,3768.55 3839.3,3768.55Z"/>
+									                </g>
+									                <g id="lace_2" transform="matrix(0.747963,0,0,0.123926,-1324.81,91.9529)">
+									                    <path d="M3843.11,3766.33L3839.3,3770.45L3819.59,3747.73" style="fill:none;stroke:#000;stroke-width:2.52px;"/>
+									                </g>
+									            </g>
+									            <g id="person">
+									                <g id="face" transform="matrix(0.877411,0,0,0.129988,-1824.28,69.6267)">
+									                    <circle class="cr cr_1" cx="3842.06" cy="3796.8" r="11.411" style=""/>
+									                    <circle class="cr cr_2 bg_white" cx="3842.06" cy="3796.8" r="11.411" style=""/>
+									                </g>
+									                <g id="f_feat">
+									                    <g transform="matrix(0.568077,0,0,0.0640491,-635.8,320.386)">
+									                        <path d="M3853.18,3799.4C3851.99,3804.45 3847.47,3808.21 3842.06,3808.21C3836.66,3808.21 3832.13,3804.45 3830.95,3799.4" style="fill:none;stroke:#000;stroke-width:3.96px;"/>
+									                    </g>
+									                    <g>
+									                        <g transform="matrix(1.86732,0,0,0.276643,-413.535,466.92)">
+									                            <circle cx="1046.43" cy="345.867" r="0.808"/>
+									                        </g>
+									                        <g transform="matrix(1.86732,0,0,0.276643,-400.911,466.92)">
+									                            <circle cx="1046.43" cy="345.867" r="0.808"/>
+									                        </g>
+									                    </g>
+									                </g>
+									                <g id="shoulder" transform="matrix(1.46486,0,0,0.0822283,-4079.38,252.43)">
+									                    <path class="bg_white sh_1" d="M3861.91,3851.72L3819.59,3851.72C3819.59,3833.82 3825.1,3819.29 3831.88,3819.29L3849.63,3819.29C3856.41,3819.29 3861.91,3833.82 3861.91,3851.72Z" style=""/>
+									                    <path class="sh_2" d="M3861.91,3851.72L3819.59,3851.72C3819.59,3833.82 3825.1,3819.29 3831.88,3819.29L3849.63,3819.29C3856.41,3819.29 3861.91,3833.82 3861.91,3851.72ZM3860.46,3848.11C3859.79,3833.9 3855.19,3822.89 3849.63,3822.89L3831.88,3822.89C3826.31,3822.89 3821.71,3833.9 3821.04,3848.11L3860.46,3848.11Z"/>
+									                </g>
+									            </g>
+									            <g id="" transform="matrix(0.632539,0,0,0.136202,-789.389,55.3331)">
+								                   <path d="M3742.34,3685.43L3742.34,3772.45L3644.33,3772.45L3644.33,3685.43L3742.34,3685.43ZM3739.18,3687.61L3647.49,3687.61L3647.49,3770.27L3739.18,3770.27L3739.18,3687.61Z"/>
+								                </g>
+									        </g>
+									    </g>
+									</svg>
+								</span>경력</h2>
 								<ul class="sub_ul">
 									<li>그래픽 디자이너</li>
 									<li>UI 디자이너</li>
 									<li>웹/앱 디자이너</li>
-									<li>퍼블리셔</li>
+									<li>웹퍼블리셔</li>
 								</ul>
 							</li>
 						</ul>
@@ -421,12 +1025,6 @@
 					<a href="#wrapper" class="top_btn">상단으로 가기</a>
 				</div>
 				<!-- .top_btn ends -->
-
-				<!-- different images format -->
-				<div class="move_div">
-					<a href="http://krowsmig.github.io/works" class="move_btn">이미지가 보이지 않나요?</a>
-					<button>닫기</button>
-				</div>
 
 				<!-- #footer -->
 				<section id="footer">
