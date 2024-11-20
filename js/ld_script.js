@@ -95,8 +95,70 @@ $(window).on("load", function() {
 			$("body").removeClass("ld_4");
 		}, 4000);
 
+
+		// sub span animation (add class)
+		setTimeout(function(){
+			$("#cont .sub span").each(function(k, v) {
+				var el = this;		
+				setTimeout(function(){
+					$(el).addClass("ro_ani");
+				}, k*700);			
+			});
+
+		}, 3800);
+
+		// sub span animation (remove class)
+		setTimeout(function(){
+			$("#cont .sub span").each(function(k, v) {
+				var el = this;		
+				setTimeout(function(){
+					$(el).removeClass("ro_ani");
+				}, k*1000);			
+			});
+		}, 6000);
+	
+
+		// main span animation
+		setTimeout(function(){
+
+			$("#cont .main span").eq(0).addClass("txt_ani");
+
+			setTimeout(function(){
+					$("#cont .main span").eq(0).removeClass("txt_ani");
+				}, 2400);
+		}, 3800);
+
+		setTimeout(function(){
+
+			$("#cont .main span").eq(1).addClass("txt_ani");
+
+			setTimeout(function(){
+					$("#cont .main span").eq(1).removeClass("txt_ani");
+				}, 1300);
+		}, 6000);
+
+		setTimeout(function(){
+
+			$("#cont .main span").eq(2).addClass("txt_ani");
+
+			setTimeout(function(){
+					$("#cont .main span").eq(2).removeClass("txt_ani");
+				}, 1250);
+		}, 7400);
+
+		setTimeout(function(){
+
+			$("#cont .main span").eq(3).addClass("txt_ani");
+
+			setTimeout(function(){
+					$("#cont .main span").eq(3).removeClass("txt_ani");
+				}, 2200);
+		}, 8900);
+
+		// lazy loading for background images
 		$(".lazy_img").removeClass("lazy_css");
 
+		// close move div
 		setTimeout(function(){
 			$(".move_div").addClass("close");
 		}, 90000);
