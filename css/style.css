@@ -2073,16 +2073,18 @@ p.sub span.p_3.span_3.ro_ani { animation: ro_ani 2s ease-out }
         opacity: 1;
     } 90% {
         opacity: 1;
-    } 85% {
+    } 83% {
         opacity: 0;
     } 80% {
         opacity: 0;
-    } 75% {
+    } 58% {
         opacity: 0;
-    } 50% {
+    } 53% {
         opacity: 1;
-    } 25% {
+    } 34% {
         opacity: 0;
+    } 25% {
+	opacity: 0;    
     } 0% {
         opacity: 1;
     }
@@ -2097,11 +2099,13 @@ p.sub span.p_3.span_3.ro_ani { animation: ro_ani 2s ease-out }
         opacity: 0;
     } 70% {
         opacity: 0;
-    } 60% {
+    } 54% {
+        opacity: 1;
+    } 50% {
         opacity: 1;
     } 0% {
-        opacity: 1;
-    }
+	opacity: 1;
+    } 
 }
 
 .dev_li.svg_ani svg #txt5 { animation: opa_3 4s infinite; transition: 1s }
