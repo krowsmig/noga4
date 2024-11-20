@@ -1979,171 +1979,221 @@ body.open .nav {
 
 
 
+@media screen and (max-width: 1024px) {
+
+	#cont .main span.txt_ani { transform: none !important; }
+	p.sub span.p_0.span_1.ro_ani, p.sub span.p_0.span_2.ro_ani, p.sub span.p_0.span_3.ro_ani, p.sub span.p_1.span_1.ro_ani, p.sub span.p_1.span_2.ro_ani, p.sub span.p_2.span_1.ro_ani, p.sub span.p_2.span_2.ro_ani, p.sub span.p_3.span_1.ro_ani, p.sub span.p_3.span_2.ro_ani,
+	p.sub span.p_3.span_3.ro_ani { animation: none; }
+}
+
+
+
+
+
+/* main span animation class */
+#cont .main span.txt_ani { transform: scale3d(1.08, 1.0, 1.0); }
+
+p.sub span.p_0.span_1.ro_ani, p.sub span.p_0.span_2.ro_ani, p.sub span.p_0.span_3.ro_ani, p.sub span.p_1.span_1.ro_ani, p.sub span.p_1.span_2.ro_ani, p.sub span.p_2.span_1.ro_ani, p.sub span.p_2.span_2.ro_ani, p.sub span.p_3.span_1.ro_ani, p.sub span.p_3.span_2.ro_ani,
+p.sub span.p_3.span_3.ro_ani { animation: ro_ani 2s ease-out }
+
+/* sub span animation */
+@keyframes ro_ani {
+	100% {
+		transform: scale(1, 1); color: #fff; border-color: #fff;
+	}
+	65% {
+		transform: scale(1, 1); color: #fff; border-color: #fff;
+	}
+	35% {
+		transform: scale(1, -1); color: #1c1c1c; border-color: #1c1c1c;
+	}
+	10% {
+		transform: scale(1, 1); color: #fff; border-color: #fff;
+
+	}0% {
+		transform: scale(1, 1); color: #fff; border-color: #fff;
+
+	}
+}
+
+
+
+
+
 .abt_ul li span { background:none !important; }
 .dev_li svg { width: 100px;margin-top: 3px; }
 .default_bg { fill: #f4f4f4 }
-.bar { fill:#aeaec1; }
+.bar { fill:#d0d0d9; }
+/*.bar path { fill:#aeaec1; }*/
 .txt_default_clr { fill:#d0d0d9; }
 .darkline { stroke: #000000; }
 
 #txt5, #txt6 { opacity:0 }
 
-.dev_li:hover svg .orn { animation: animation1 2s infinite; transition: 1s }
+.dev_li.svg_ani svg .orn, .dev_li.svg_ani svg .grn, .dev_li.svg_ani svg .gry, .dev_li.svg_ani svg .blu { animation: animation1 4s infinite; transition: 1s }
 @keyframes animation1 {
     100% {
         transform: translate(0px, 0px);
-    } 50% {
+/*        fill: #aeaec1;*/
+    } 75% {
         transform: translate(0px, -30px);
+    } 50% {
+        transform: translate(0px, 0px);
+    } 25% {
+        transform: translate(0px, -15px);
     } 0% {
         transform: translate(0px, 0px);
+/*        fill: #aeaec1;*/
     }
 }
 
-.dev_li:hover svg .grn { animation: animation5 2s infinite; transition: 1s }
-@keyframes animation5 {
-    100% {
-        transform: translate(0px, 0px);
-    } 50% {
-        transform: translate(0px, -30px);
-    } 0% {
-        transform: translate(0px, 0px);
-    }
-}
 
-.dev_li:hover svg .gry { animation: animation11 2s infinite; transition: 1s }
-@keyframes animation11 {
-    100% {
-        transform: translate(0px, 0px);
-    } 50% {
-        transform: translate(0px, -30px);
-    } 0% {
-        transform: translate(0px, 0px);
-    }
-}
-
-.dev_li:hover svg .blu { animation: animation10 2s infinite; transition: 1s }
+.dev_li.svg_ani svg .blu { animation: animation10 4s infinite; transition: 1s }
 @keyframes animation10 {
+
     100% {
         transform: translate(0px, 0px);
-    } 50% {
-        fill: #6238FF; 
+    } 75% {
         transform: translate(0px, -30px);
+        fill: #6238FF;
+    } 50% {
+        transform: translate(0px, 0px);
+    } 25% {
+        transform: translate(0px, -15px);
+        fill: #6238FF;
     } 0% {
+        transform: translate(0px, 0px);
     }
 }
 
-.dev_li:hover svg #txt1 { animation: opa_1 2s infinite; transition: 1s }
+.dev_li.svg_ani svg #txt1 { animation: opa_1 4s infinite; transition: 1s }
 @keyframes opa_1 {
+  
     100% {
-    } 80% { 
         opacity: 1;
-    } 70% { 
+    } 90% {
+        opacity: 1;
+    } 85% {
         opacity: 0;
-    } 20% {
+    } 80% {
+        opacity: 0;
+    } 75% {
+        opacity: 0;
+    } 50% {
+        opacity: 1;
+    } 25% {
         opacity: 0;
     } 0% {
         opacity: 1;
     }
 }
 
-.dev_li:hover svg #txt2 { animation: opa_2 2s infinite; transition: 1s }
+.dev_li.svg_ani svg #txt2 { animation: opa_2 4s infinite; transition: 1s }
 @keyframes opa_2 {
+
     100% {
-    } 70% { 
         opacity: 1;
-    } 60% { 
+    } 80% {
         opacity: 0;
-    } 40% {
+    } 70% {
         opacity: 0;
+    } 60% {
+        opacity: 1;
     } 0% {
         opacity: 1;
     }
 }
 
-.dev_li:hover svg #txt5 { animation: opa_3 2s infinite; transition: 1s }
+.dev_li.svg_ani svg #txt5 { animation: opa_3 4s infinite; transition: 1s }
 @keyframes opa_3 {
     100% {
         opacity: 0;
-    } 80% { 
+    } 92% { 
         opacity: 0;
-    } 70% { 
+    } 86% { 
         opacity: 1;
-    } 20% {
+    } 45% { 
+        opacity: 0;
+    } 40% { 
+        opacity: 0;
+    } 30% { 
         opacity: 1;
+    } 15% {
+        opacity: 1;
+    } 5% {
+        opacity: 0;
     } 0% {
         opacity: 0;
     }
 }
 
-.dev_li:hover svg #txt6 { animation: opa_4 2s infinite; transition: 1s }
+.dev_li.svg_ani svg #txt6 { animation: opa_4 4s infinite; transition: 1s }
 @keyframes opa_4 {
     100% {
         opacity: 0;
-    } 65% { 
+    } 90% { 
         opacity: 0;
-    } 55% { 
+    } 80% { 
+        opacity: 1;
+    } 70% { 
+       	opacity: 1;
+    } 60% { 
+        opacity: 0;
+    } 50% { 
         opacity: 1;
     } 40% {
         opacity: 1;
+    } 30% {
+        opacity: 0;
     } 0% {
         opacity: 0;
     }
 }
 
-
-.dev_li:hover svg .bar rect { animation: animation 2s infinite; transition: 1s }
+.dev_li.svg_ani svg .bar rect { animation: animation 4s infinite; transition: 1s }
 @keyframes animation {
     100% {
         transform: translate(0px, 0px);
-    } 50% {
+        fill: #aeaec1; 
+    } 75% {
         transform: translate(0px, 27px);
-        fill: #000000;
+        fill: #000; 
+    } 50% {
+        transform: translate(0px, 0px);
+        fill: #aeaec1; 
+    } 25% {
+        transform: translate(0px, 15px);
+        fill: #000; 
     } 0% {
         transform: translate(0px, 0px);
-        fill:#aeaec1; 
-    }
-}
-
-.dev_li:hover svg #box path { animation: animation2 2s infinite; transition: 1s }
-@keyframes animation2 {
-    100% {
-        fill: #f4f4f4; 
-    } 50% {
-        fill: #f4f4f4; 
-    } 0% {
-        fill: #f4f4f4; 
+        fill: #aeaec1; 
     }
 }
 
 /* tools */ 
-.tool_li svg { width: 100px; margin-left: 17px }
+.tool_li svg { width: 100px; margin-left: 13px }
 #dots circle { stroke-width: 2px; stroke: #000; }
 #dots path { display:none; }
 
-#arrow {
-    transform: translate(0, 24px);
-    opacity: 0;
-    transition: 0.2s;
-}
+#arrow { transform: translate(0, 24px); opacity: 0; transition: 0.2s; }
 
 #tl_lines path { stroke: #000; }
 
-.tool_li:hover svg #arrow { animation: arw_1 3s infinite; transition: 1s }
-
+.tool_li.svg_ani svg #arrow { animation: arw_1 4s infinite; transition: 1s }
 @keyframes arw_1 {
     100% {
     	ransform: translate(0, 24px);
-    } 95% {
+    } 70% {
     	transform: translate(0, 0);
     	opacity: 1;
-    } 75% {
+    } 56% {
     	opacity: 1;
-		transform: translate(124px, -93px);
-    } 55% {
-		transform: translate(-25px, -165px);
-    } 35% {
-        transform: translate(-150px, -75px);
-    } 15% {
+		transform: translate(188px, -146px);
+    } 42% {
+		transform: translate(-44px, -262px);
+    } 28% {
+		transform: translate(-232px, -121px);
+    } 10% {
         transform: translate(0, 0);
         opacity: 1;
     } 0% {
@@ -2151,143 +2201,215 @@ body.open .nav {
     }
 }
 
-.tool_li:hover svg #right_bttom circle { animation: dots_1 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #arrow .arrow_outline { animation: arw_out 4s infinite; transition: 1s }
+@keyframes arw_out {
+    100% {
+    	fill: #fff;
+    } 72% {
+    	fill: #fff;
+    } 71% {
+    	fill: #000;
+    } 56% {
+    	fill: #000;
+    } 42% {
+		
+    } 11% {
+        fill: #000;
+    } 10% {
+        fill: #fff;
+    } 0% {
+        
+    }
+}
+
+.tool_li.svg_ani svg #arrow .arrow_body { animation: arw_body 4s infinite; transition: 1s }
+@keyframes arw_body {
+    100% {
+    	fill: #000;
+    } 71% {
+    	fill: #000;
+    } 70% {
+    	fill: #fff;
+    } 56% {
+    	fill: #fff;
+    } 42% {
+		
+    } 11% {
+        fill: #fff;
+    } 10% {
+        fill: #000;
+    } 0% {
+        
+    }
+}
+
+.tool_li.svg_ani svg #tls rect { animation: arw_7 4s infinite; transition: 1s }
+@keyframes arw_7 {
+    100% {
+    	fill: #f4f4f4;
+    
+    } 73% {
+    	fill: #d5d9ff;
+    } 72% {
+        fill: #f4f4f4;
+    } 0% {
+        
+    }
+}
+.tool_li.svg_ani svg #right_bttom circle { animation: dots_1 4s infinite; transition: 1s }
 
 @keyframes dots_1 {
     100% {
     	stroke: #000;
-    } 96% {
-    	stroke: #000;
-    } 95% {
+    } 81% {
     	stroke: #3D4FFF;
-    } 75% {
-    	
-    } 55% {
-    	
-    } 15% {
+    } 10% {
     	stroke: #3D4FFF;
-    } 14% {
+    } 9% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #left_bottom circle { animation: dots_2 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #left_bottom circle { animation: dots_2 4s infinite; transition: 1s }
 
 @keyframes dots_2 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 95% {
-    } 35% {
+    } 28% {
     	stroke: #3D4FFF;
-    } 34% {
+    } 27% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #left_top circle { animation: dots_3 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #left_top circle { animation: dots_3 4s infinite; transition: 1s }
 
 @keyframes dots_3 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 55% {
+    }42% {
     	stroke: #3D4FFF;
-    } 54% {
+    } 41% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #right_top circle { animation: dots_4 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #right_top circle { animation: dots_4 4s infinite; transition: 1s }
 
 @keyframes dots_4 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 75% {
+    } 56% {
     	stroke: #3D4FFF;
-    } 74% {
+    } 55% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #lines path { animation: arw_2 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #lines path { animation: arw_2 4s infinite; transition: 1s }
 
 @keyframes arw_2 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 35% {
+    } 28% {
     	stroke: #3D4FFF;
-    } 34% {
+    } 27% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #lines_3 path { animation: arw_3 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #lines_3 path { animation: arw_3 4s infinite; transition: 1s }
 
 @keyframes arw_3 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 55% {
+    } 42% {
     	stroke: #3D4FFF;
-    } 54% {
+    } 41% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #lines_2 path { animation: arw_4 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #lines_2 path { animation: arw_4 4s infinite; transition: 1s }
 
 @keyframes arw_4 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 75% {
+    } 56% {
     	stroke: #3D4FFF;
-    } 74% {
+    } 55% {
     	stroke: #000;
     } 0% {
         
     }
 }
 
-.tool_li:hover svg #lines_4 path { animation: arw_5 3s infinite; transition: 1s }
+.tool_li.svg_ani svg #lines_4 path { animation: arw_5 4s infinite; transition: 1s }
 
 @keyframes arw_5 {
     100% {
+    	stroke: #000;
+    } 81% {
     	stroke: #3D4FFF;
-    } 95% {
+    } 70% {
     	stroke: #3D4FFF;
-    } 94% {
+    } 69% {
     	stroke: #000;
     } 0% {
         
     }
 }
+
+
 
 /* worker */
 .worker_li svg { width: 60px; margin-top: -4px }
 .bg_white { fill: #fff; }
 .cr_1 { stroke-width:4.5px; stroke: #000; }
 
-.worker_li:hover svg { animation: wrkr_0 3s infinite; transition: 1s }
+.worker_li.svg_ani svg { animation: wrkr_0 4s infinite; }
 @keyframes wrkr_0 {
     100% {
-    } 90% {
+    } 80% {
         transform: rotate(0);
         
     } 70% {
         transform: rotate(-10deg);
         
-    } 20% {
+    } 55% {
         transform: rotate(10deg);
+    } 40% {
+        transform: rotate(-10deg);
+        
+    } 25% {
+        transform: rotate(10deg);
+    } 15% {
+        
+        transform: rotate(0);
     } 0% {
         
         transform: rotate(0);
@@ -2295,16 +2417,17 @@ body.open .nav {
 }
 
 #f_feat { opacity:0 }
-.worker_li:hover svg #f_feat { animation: wrkr_2 3s infinite; transition: 1s }
+.worker_li.svg_ani svg #f_feat { animation: wrkr_2 4s infinite; }
 @keyframes wrkr_2 {
     100% {
     } 90% {
         opacity: 0;
         
-    } 75% {
-        transform: rotate(0);
     } 72% {
+        transform: rotate(0);
+    } 71% {
         opacity: 0;
+        transform: translate(0, 0);
     } 70% {
         opacity: 1;
         transform: translate(0, 0.66px);
@@ -2313,60 +2436,70 @@ body.open .nav {
         transform: rotate(10deg);
         opacity: 1;
         transform: translate(0, 0.66px);
-    } 10% {
+    } 8% {
         opacity: 1;
+    } 5% {
+        opacity: 0;
+        transform: rotate(0);
     } 0% {
         opacity: 0;
         transform: rotate(0);
     }
 }
 
-.worker_li:hover svg .cr_1 { animation: wrkr_3 3s infinite; transition: 1s }
+.worker_li.svg_ani svg .cr_1 { animation: wrkr_3 4s infinite; }
 @keyframes wrkr_3 {
     100% {
-    } 80% {
+    } 75% {
         stroke-width: 4.5px;
-        
+        transform: translate(0, 0);
     } 70% {
-        stroke-width: 14px;
+        stroke-width: 18px;
         transform: translate(0, 5px);
         transition: 0.1s;
         
     } 20% {
-        transform: translate(0, 5px);
-    } 5% {
-        stroke-width: 14px;
-    } 0% {
+    } 7% {
+    	transform: translate(0, 5px);
+        stroke-width: 18px;
+    }  0% {
+    	transform: translate(0, 0);
         stroke-width: 4.5px;
+        transform: translate(0, 0);
     }
 }
 
-.worker_li:hover svg .cr_2 { animation: wrkr_4 3s infinite; transition: 1s }
+.worker_li.svg_ani svg .cr_2 { animation: wrkr_4 4s infinite; }
 @keyframes wrkr_4 {
     100% {
-    } 80% {
+    } 75% {
         stroke-width: 0;
         fill: #fff;
+        transform: translate(0, 0);
     } 70% {
-        stroke-width: 10px;
+        stroke-width: 14px;
         stroke:#FFCD4A;
         fill: #FFCD4A;
         transform: translate(0, 5px);
         transition: 0.1s;
     } 20% {
-        transform: translate(0, 5px);
+       
         transition: 0.1s;
-    } 5% {
-        stroke-width: 10px;
+    } 7% {
+
+        stroke-width: 14px;
         stroke:#FFCD4A;
         fill: #FFCD4A;
-    } 0% {
+        transform: translate(0, 5px);
+    }  0% {
+    	transform: translate(0, 0);
         stroke-width: 0;
         fill: #fff;
+        
     }
 }
 
-.worker_li:hover svg .sh_1 { animation: wrkr_5 3s infinite; transition: 1s }
+.worker_li.svg_ani svg .sh_1 { animation: wrkr_5 4s infinite; }
 @keyframes wrkr_5 {
     100% {
     } 80% {
@@ -2375,7 +2508,7 @@ body.open .nav {
     } 70% {
         transform: translate(0px, 15px);
         fill: #FFCD4A;
-    } 20% {
+    } 12% {
         transform: translate(0px, 15px);
         fill: #FFCD4A;
     } 0% {
@@ -2384,16 +2517,16 @@ body.open .nav {
     }
 }
 
-.worker_li:hover svg .sh_2 { animation: wrkr_6 3s infinite; transition: 1s }
+.worker_li.svg_ani svg .sh_2 { animation: wrkr_6 4s infinite; }
 @keyframes wrkr_6 {
     100% {
-    } 90% {
+    } 75% {
         transform: translate(0px, 0);
         
     } 70% {
         transform: translate(0px, 15px);
     
-    } 20% {
+    } 12% {
         transform: translate(0px, 15px);
 
     } 0% {
