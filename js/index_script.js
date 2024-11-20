@@ -1,5 +1,28 @@
 $(document).ready(function(){
 
+
+	var getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").outerHeight() + $("#forfun").outerHeight();
+	
+	$(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > getHeights) {
+
+				$(".abt_ul li").addClass("svg_ani");
+
+			} else {
+
+				$(".abt_ul li").removeClass("svg_ani");
+
+			}
+		}).resize(function(){ 
+			if ($(this).width() < 1024) {
+				
+			} else {
+
+			}
+		});
+	});
+
 	// scroll up the content
 	setTimeout(function(){
 		$("html, body").animate({
@@ -59,9 +82,6 @@ $(document).ready(function(){
 	  }
 	});
 
-	// 
-	$(".move_div button").click(function(){
-		$(".move_div").addClass("close");
-	});
-	
+
+
 });
