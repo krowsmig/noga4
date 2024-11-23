@@ -3,7 +3,7 @@
 			.img_title_div { overflow: hidden; }
 			#wrapper #img_title_2 .img_title_1 span.ic_pointer { position: absolute; width: 50px; height: 50px; border-radius: 50%; background: #000; opacity: 0; display: block; border: 0 none; top: 115px; left: 50%; margin-left: -412px !important; z-index: 100000000000;}
 			#wrapper #img_title_2 .img_title_1 span.ic_pointer.ic_pointer_2 { margin-left: -478px !important; }
-			#img_title_1 .img_title_1 span, #img_title_2 .img_title_1.img_title_2 span { position: absolute; left: 50%; margin-left: -554px !important; display: block; width: 1068px; height:600px; margin: 0 auto; border-width: 20px; border-bottom:0 none !important; border-style: solid; border-color: transparent;border-radius:10px; background-repeat: no-repeat; background-size: 100%; background-position: center center; transition:0.2s; }
+			#img_title_1 .img_title_1 span, #img_title_2 .img_title_1.img_title_2 span { position: absolute; left: 50%; margin-left: -554px !important; display: block; width: 1068px; height:600px; margin: 0 auto; border-width: 20px; border-bottom:0 none !important; border-style: solid; border-color: transparent;border-radius:10px; background-repeat: no-repeat; background-size: 100%; background-position: top center; transition:0.2s; }
 			#img_title_1 .img_title_1 span.first { border-color: #2d2d2d;}
 			#img_title_1 .img_title_1 span.first { z-index: 10; background-image: url("../images/jndk/main_web_1.webp"); }
 			#img_title_1 .img_title_1 span.second {transform: translateY(0); z-index: 100; background-image: url("../images/jndk/main_web_text_1.webp"); }
