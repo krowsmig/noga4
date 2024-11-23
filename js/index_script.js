@@ -2,7 +2,9 @@ $(document).ready(function(){
 
 
 	var getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").outerHeight() + $("#forfun").outerHeight();
-	
+	$(window).resize(function(){
+	         getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").outerHeight() + $("#forfun").outerHeight();
+	});
 	$(function(){
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > getHeights) {
