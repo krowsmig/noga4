@@ -1418,6 +1418,7 @@
 }
 
 @media screen and (max-width: 450px) {
+    .gender_ul .ic_p {margin-top:77px !important}
     .pd_tp_160 {
         padding-top:100px
     }
