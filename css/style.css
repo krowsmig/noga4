@@ -2482,63 +2482,61 @@ p.sub span.p_0.span_1.ro_ani,p.sub span.p_0.span_2.ro_ani,p.sub span.p_0.span_3.
     }
 }
 
-.worker_li.svg_ani svg .cr_1 {
-    animation: 4s infinite wrkr_3
-}
-
-@keyframes wrkr_3 {
-    0%,75% {
-        stroke-width: 4.5px;
-        transform: translate(0,0)
-    }
-
-    70% {
-        stroke-width: 18px;
-        transform: translate(0,5px);
-        transition: .1s
-    }
-
-    7% {
-        transform: translate(0,5px);
-        stroke-width: 18px
-    }
-}
-
-.worker_li.svg_ani svg .cr_2 {
-    animation: 4s infinite wrkr_4
-}
-
+.worker_li svg .cr_2 { stroke-width: 0px }
+.worker_li.svg_ani svg .cr_2 { animation: wrkr_4 4s infinite; }
 @keyframes wrkr_4 {
-    75% {
+    100% {
+    } 73% {
         stroke-width: 0;
         fill: #fff;
-        transform: translate(0,0)
-    }
-
-    70% {
+        transform: translate(0, 0);
+    } 71% {
         stroke-width: 14px;
-        stroke: #FFCD4A;
+        transform: translate(0, 5px);
+        stroke:#FFCD4A;
         fill: #FFCD4A;
-        transform: translate(0,5px);
-        transition: .1s
-    }
+    } 20% {
 
-    20% {
-        transition: .1s
-    }
-
-    7% {
+    } 7% {
+        stroke:#FFCD4A;
+        fill: #FFCD4A;
         stroke-width: 14px;
-        stroke: #FFCD4A;
-        fill: #FFCD4A;
-        transform: translate(0,5px)
+        transform: translate(0, 5px);
+    } 6% {
+        stroke-width: 0px;
+        
+    } 0% {
+    	transform: translate(0, 0);
+        stroke-width: 0px;
+        fill: #fff;
+        
     }
+}
 
-    0% {
-        transform: translate(0,0);
-        stroke-width: 0;
-        fill: #fff
-    }
+.worker_li  svg .cr_1  { stroke-width: 4.5px; fill: #FFCD4A }
+.worker_li.svg_ani svg .cr_1 { animation: wrkr_3 4s infinite; }
+@keyframes wrkr_3 {
+    100% {
+    } 73% {
+        stroke-width: 4.5px;
+        
+        transform: translate(0, 0);
+    } 71% {
+        stroke-width: 18px;
+        transform: translate(0, 5px);	
+		fill: #FFCD4A;
+    } 20% {
+    } 7% {
+    	stroke-width: 18px;
+    	transform: translate(0, 5px);
+    	fill: #FFCD4A;
+    } 6% {
+    	stroke-width: 4.5px;
+    }  0% {
+    	transform: translate(0, 0);
+    	stroke-width: 4.5px;
+        fill: #FFCD4A;
+    }	
 }
 
 .worker_li.svg_ani svg .sh_1 {
