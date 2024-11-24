@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 
-	var getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").outerHeight() + $("#forfun").outerHeight();
+	var getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").height() + $("#forfun").outerHeight();
 	$(window).resize(function(){
-	         getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").outerHeight() + $("#forfun").outerHeight();
+	         getHeights = $("#gnb").outerHeight() + $("#cont").outerHeight() + $("#projects").height() + $("#forfun").outerHeight();
 	});
 	$(function(){
 		$(window).scroll(function(){
