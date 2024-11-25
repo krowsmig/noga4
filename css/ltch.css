@@ -80,6 +80,7 @@
 .content_div .circle_bg_div { position: absolute; bottom: 0; left: 0; display: block;text-align: center; overflow:hidden; height: 900px; width:100%; }
 .content_div .circle_bg_div .circle_rel { position:relative; width:100%; height:100%; }
 .content_div .circle_bg { display: inline-block; background: url(../images/ltch/listen_bg.webp) center center no-repeat; width: 1600px; height: 1600px; background-size: 1600px; transform: rotate(0); transition: 0.4s; z-index: 10; }
+.content_div .circle_bg_2 { opacity: 0; background: url(../images/ltch/listen_bg_blur.webp) }
 
 #content_1.show_now .circle_bg { -webkit-animation: circle_ani 5s infinite; animation: circle_ani 5s infinite; }
 
@@ -90,6 +91,34 @@
 		transform: rotate(180deg);
 	} 0% {
 		transform: rotate(0);
+	} 
+}
+
+
+#content_1.show_now .circle_bg_2 { -webkit-animation: circle_ani_1 5s infinite; animation: circle_ani_1 5s infinite; }
+
+@keyframes circle_ani_1 {
+	100% {
+		transform: rotate(0);
+		opacity: 0;
+	} 85% {
+		
+		opacity: 1;
+	} 75% {
+		
+		opacity: 0;
+	} 50% {
+		transform: rotate(180deg);
+		opacity: 1;
+	} 35% {
+		
+		opacity: 0;
+	} 15% {
+		
+		opacity: 1;
+	}  0% {
+		transform: rotate(0);
+		opacity: 0;
 	} 
 }
 
